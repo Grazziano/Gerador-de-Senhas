@@ -35,6 +35,16 @@ $value = isset($_GET['inlineRadioOptions']) ? $_GET['inlineRadioOptions'] : 0;
 $senhaGerada = "";
 
 switch ($value) {
+  case 24:
+  // Retornar a senha com 24 caracteres como maiúsculas, minusculas, números e símbolos:
+  $senhaGerada = gerar_senha(24, true, true, true, true);
+  break;
+
+  case 12:
+  // Retornar a senha com 12 caracteres como maiúsculas, minusculas, números e símbolos:
+  $senhaGerada = gerar_senha(12, true, true, true, true);
+  break;
+
   case 10:
   // Retornar a senha com 10 caracteres como maiúsculas, minusculas, números e símbolos:
   $senhaGerada = gerar_senha(10, true, true, true, true);
@@ -67,8 +77,7 @@ switch ($value) {
       font-weight: 400;
     }
     .border.border-primary{
-      margin-top: 30px;
-      padding: 5px;
+      padding: 10px;
     }
     span.border.border-primary{
       font-size: 20px;
@@ -80,7 +89,7 @@ switch ($value) {
 
   <ul class="nav justify-content-center bg-primary">
     <li class="nav-item">
-      <h1>Gerador de senhas</h1>
+      <h1>Gerador de Senhas</h1>
     </li>
   </ul>
 
@@ -92,15 +101,23 @@ switch ($value) {
         </div>
         <div class="form-check">
           <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="6">
-          <label class="form-check-label" for="inlineRadio1">6 caracteres como maiúsculas e minusculas</label>
+          <label class="form-check-label" for="inlineRadio1">6 caracteres com maiúsculas e minusculas</label>
         </div>
         <div class="form-check">
           <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="8">
-          <label class="form-check-label" for="inlineRadio2">8 caracteres como maiúsculas, minusculas e números</label>
+          <label class="form-check-label" for="inlineRadio2">8 caracteres com maiúsculas, minusculas e números</label>
         </div>
         <div class="form-check">
           <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="10">
-          <label class="form-check-label" for="inlineRadio3">10 caracteres como maiúsculas, minusculas, números e símbolos</label>
+          <label class="form-check-label" for="inlineRadio3">10 caracteres com maiúsculas, minusculas, números e símbolos</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="12">
+          <label class="form-check-label" for="inlineRadio3">12 caracteres com maiúsculas, minusculas, números e símbolos</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="24">
+          <label class="form-check-label" for="inlineRadio3">24 caracteres com maiúsculas, minusculas, números e símbolos</label>
         </div>
         <div class="d-grid gap-2 mt-5 mb-5">
           <button type="submit" class="btn btn-success">Gerar Senha</button>
@@ -112,7 +129,7 @@ switch ($value) {
     if ($senhaGerada != "") {
       ?>
       <div class="alert alert-info" role="alert">
-        Esta é a sua nova senha:<br> <span class="border border-primary"><?php echo utf8_encode($senhaGerada) ?></span>
+        Esta é a sua nova senha:<br><br> <span class="border border-primary"><?php echo utf8_encode($senhaGerada) ?></span>
       </div>
       <?php
     }
