@@ -112,12 +112,12 @@ switch ($value) {
           <label class="form-check-label" for="inlineRadio3">10 caracteres com maiúsculas, minusculas, números e símbolos</label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="12">
-          <label class="form-check-label" for="inlineRadio3">12 caracteres com maiúsculas, minusculas, números e símbolos</label>
+          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="12">
+          <label class="form-check-label" for="inlineRadio4">12 caracteres com maiúsculas, minusculas, números e símbolos</label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="24">
-          <label class="form-check-label" for="inlineRadio3">24 caracteres com maiúsculas, minusculas, números e símbolos</label>
+          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="24">
+          <label class="form-check-label" for="inlineRadio5">24 caracteres com maiúsculas, minusculas, números e símbolos</label>
         </div>
         <div class="d-grid gap-2 mt-5 mb-5">
           <button type="submit" class="btn btn-success">Gerar Senha</button>
